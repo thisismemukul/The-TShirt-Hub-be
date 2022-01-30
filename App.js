@@ -28,6 +28,10 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 //My Routes
+app.get("/", (req, res) => {
+    res.send("Hello World from app.js");
+});
+
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
